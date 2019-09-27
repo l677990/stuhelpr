@@ -1,0 +1,56 @@
+{{extend './dome.html'}}
+
+{{block 'title'}} 首页 {{/block}}
+
+{{block 'link'}} {{/block}}
+{{block 'content'}}
+<!--轮播图 -->
+<section id="banner">
+<div class="mui-slider" >
+  <div class="mui-slider-group mui-slider-loop">
+    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../public/images/444.jpg" /></a></div>
+    <div class="mui-slider-item"><a href="/act"><img src="../public/images/111.jpg" /></a></div>
+    <div class="mui-slider-item"><a href="#"><img src="../public/images/222.jpg" /></a></div>
+    <div class="mui-slider-item"><a href="#"><img src="../public/images/333.jpg" /></a></div>
+    <div class="mui-slider-item"><a href="#"><img src="../public/images/444.jpg" /></a></div>
+    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../public/images/111.jpg" /></a></div>
+  </div>
+  <div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+</div>
+</section>
+<!--课程表-->
+{{if (isClass) }}
+<a href="javscript:;" id="tap"> 点击划出课程表</a>
+  <div class="timetable">
+	</div>
+{{else}}
+<a href="/login" id="tap"> 点击划出课程表</a>
+  <div class="timetable">
+	</div>
+{{/if}}
+<!--班级通知-->
+<div class="mui-card">
+	<!--页眉，放置标题-->
+	<div class="mui-card-header index-bj">{{title}}<div class="sh_history"><a href="/sh_history">历史通知</a></div>
+	</div>
+	<!--内容区-->
+	<div class="mui-card-content ">
+		<pre class="card">{{text}}
+    </pre>
+
+
+	<!--页脚，放置补充信息或支持的操作-->
+	<div class="mui-card-footer">发表时间：{{time}} <span class="mui-badge  mui-badge-inverted">浏览量:{{browse}}</span></div>
+</div>
+<script type="text/javascript" src="../public/lib/mui/js/mui.min.js"></script>	
+<script src="../public/lib/jquery/jquery.min.js"></script>
+<script src="../public/js/index.js"></script>
+<script type="text/javascript">
+	
+</script>	
+  {{/block}}

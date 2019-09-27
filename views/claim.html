@@ -1,0 +1,44 @@
+{{extend './dome.html'}}
+{{block 'title'}} 失物招领 {{/block}}
+
+{{block 'link'}} <link rel="stylesheet" type="text/css" href="../public/css/Claim.css"> {{/block}}
+
+{{block 'content'}}
+<!--失物招领-->
+
+	{{each rows}}
+<div class="mui-card-header mui-card-media">
+	<img src="../public/images/tx2.jpg"/>
+	<div class="mui-media-body">
+		<div class="sh_box">{{$value.title }}</div>
+		<p>发表于{{$value.time }}</p>
+	</div>
+</div>
+<div class="box"><img class="lazy" data-echo="{{$value.image}}" src="../public/images/none.jpg"><br>
+<div class="claim-box"><b>联系方式:</b>{{$value.contact}}</div>   
+<div class="claim-box"><!-- <b>描述:</b> -->
+<pre class="card">
+{{$value.content}}
+</pre>
+</div>
+</div>
+<br>
+{{/each}}
+
+
+
+<!--按钮-->
+<a  href="/claimRelease"  class="sh-claimbtn">发布</a>
+
+<script src="../public/lib/mui/js/mui.min.js"></script> 
+<script src="../public/lib/echo/echo.min.js"></script>
+<script >
+
+echo.init({
+    offset: 100, // 指定距离视窗上下左右位置图片预加载
+    throttle: 50, // 延迟加载  Number|String	Default: 250
+});
+</script>
+
+{{/block}}
+

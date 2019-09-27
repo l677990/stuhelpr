@@ -1,0 +1,128 @@
+/*班费支出*/
+.class-money {
+	margin: 10px;
+	background: skyblue;
+	border-radius: 10px;
+	border:1px solid #000000;
+}
+.classfee-money {
+	padding: 10px;
+}
+.class-moneyimg {
+	height: 200px;
+
+}
+.class-btn {
+	widows: 80%;
+}
+.btnfh {
+	display: block;
+	margin: 0 auto;
+	border-radius: 5px;
+	width: 60%;
+	font-size: 15px;
+}
+.classmoney-btn {
+	height: 38px;
+	line-height: 23px;
+}
+
+/*同学电话*/
+.sh-phone {
+	width: 100%;
+	/*height: 300px;*/
+}
+.sh-phone table {
+	color: #666666;
+	/*height: 250px;*/
+	width: 95%;
+	margin-left: 10px;
+	text-align: center;
+	border: 1px solid #CCCCCC;
+}
+.timetable
+tr td p{
+	font-size: 14px;
+	color: #CCC;
+	text-align: left;
+	line-height: 28px;
+}
+.phone-btn {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+
+/*通知*/
+.sh-notice {
+	height: 300px;
+	margin: 10px;
+}
+.sh-noticesize {
+	font-size: 20px;
+	color: #CCCCCC;
+	text-align: left;
+}
+
+/*课程表*/
+.course-timetable {
+	border: 1px solid #e7e7e7;
+	margin: 10px;
+}
+#timetable-btn {
+	width: 60%;
+	margin-top: 10px;
+	background-color:rgba(230,230,240,.3);
+	height: 40px;
+	font-size: 16px;
+}
+.timetable-btn-font {
+	width: 30px;
+	margin: 17px;
+}
+
+/*登录界面*/
+.Login-box {
+	height: 167px;
+	background-repeat: no-repeat;
+	background-image: url(../images/dlbj.jpg);
+	background-position: 50% 50%;
+}
+.Login-box2 {
+	margin: 30px 10px 30px 10px;
+	height: 100px;
+}
+
+/*用户注册*/
+.sh-reg {
+	height: 40px;
+	padding: 10px 0 0 10px;
+	font-size: 25px;
+}
+.input-reg p {
+	font-size: 16px;
+	color: #000;
+}
+.input-reg {
+	width: 96%;
+	padding-left: 10px;
+}
+.input-name {
+	font-size: 16px;
+}
+.reg-btn {
+	height: 40px;
+	text-align: center;
+	border-radius: 5px;
+}
+.reg-btn2 {
+	width: 60px;
+	height: 40px;
+	border-radius: 5px;
+}
+.stuname{
+	color: #000;
+}
+.mui-ellipsis small{
+	padding-right:30px;
+}

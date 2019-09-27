@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/public/favicon.ico" rel="SHORTCUT ICON">
+  <meta charset="UTF-8">
+  <title>{{block 'title'}}  {{/block}}</title>
+  <link rel="stylesheet" type="text/css" href="../public/lib/mui/css/mui.css">
+<link rel="stylesheet" type="text/css" href="../public/lib/mui/css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="../public/css/style.css">
+{{block 'link'}}  {{/block}}
+</head>
+<body style="background:#FFFFFF">
+<!--导航栏-->
+<nav id="sh_nav">
+  <div class="mui-content">
+    <div class="mui-row">
+        <div class="mui-col-xs-3 tab" ><a href="/"><span class="mui-icon mui-icon-home"></span><p>首页</a></p></div>
+    <div class="mui-col-xs-3 tab"><a href="/activity"><span class="mui-icon mui-icon-chatboxes"></span><p>校内活动</p></a></div>
+    <div class="mui-col-xs-3 tab"><a href="/claim"><span class="mui-icon mui-icon-pengyouquan"></span><p>失物招领</p></a></div>
+    <div class="mui-col-xs-3 tab"><a href="/user"><span class="mui-icon mui-icon mui-icon-contact"></span><p>我的</p></a></div>
+        </div>
+    </div>
+    </nav>
+{{block 'content'}}  {{/block}}
+
+
+    </body>
+</html>

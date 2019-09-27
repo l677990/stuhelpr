@@ -1,0 +1,35 @@
+{{extend './dome.html'}}
+{{block 'title'}} 我的 {{/block}}
+{{block 'link'}} <link rel="stylesheet" type="text/css" href="../public/css/user.css">
+<link rel="stylesheet" type="text/css" href="../public/css/Claim.css">{{/block}}
+
+
+{{block 'content'}} 
+<!--用户-->
+<section class="user_section">
+<div class="claim-box"><b>姓 &nbsp;&nbsp;名:</b>{{ stuName}}</div>
+<div class="claim-box"><b>学 &nbsp;&nbsp;号:</b>{{stuId}}</div>   
+<div class="claim-box"><b>寝室号:</b>{{chamBer}}</div>
+<div class="claim-box"><b>辅导员:</b>{{stuTor}}</div>  
+<div class="claim-box"><b>联系电话:</b>{{stuPhone}}</div>
+</section>
+<br>
+<!--生活委员功能-->
+{{if stuPost!=0}}
+<div class="sh_root">
+	<div class="user_size">管理功能</div><br>
+	 <a href="/sh_classFee"><button  type="button" name="" class="user-btn">班费</button></a><p></p>
+	 <a href="/sh_course"><button  type="button" name="" class="user-btn">课程表</button></a><p></p>
+	 <a href="/sh_userPhone"><button  type="button" name="" class="user-btn">同学电话</button></a><p></p>
+	 <a href="/sh_notice"><button  type="button" name="" class="user-btn">通知</button></a><p></p>
+</div>
+{{/if}}
+<!--修改退出按钮-->
+<div class="sh_root2">
+<a href="/logout"><button  type="button" name="" class="user-btn2">注销</button></a><p></p>
+</div>
+<script type="text/javascript" src="../public/lib/mui/js/mui.min.js"></script>		
+<script type="text/javascript">
+
+</script>	
+{{/block}}

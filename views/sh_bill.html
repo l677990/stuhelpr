@@ -1,0 +1,30 @@
+{{extend './dome.html'}}
+
+{{block 'title'}} 账单明细 {{/block}}
+
+{{block 'link'}} <link rel="stylesheet" type="text/css" href="../public/css/SH.css">
+ {{/block}}
+{{block 'content'}}
+<!--学生电话-->
+<ul class="mui-table-view">
+
+	{{each rows}}
+    <li class="mui-table-view-cell mui-media">
+            <div class="mui-media-body">
+               
+               <p class='mui-ellipsis stuname'>记录时间: {{$value.time}}</p>
+               <p class='mui-ellipsis stuname'>支出: {{$value.zcmoney}}元</p>
+               <p class='mui-ellipsis stuname'>收入: {{$value.srmoney}}元</p>
+               <p class='mui-ellipsis stuname'>负责人学号: {{$value.stuid}}</p>
+             	<p class='mui-ellipsis stuname'>说明: {{$value.info}}</p>
+            </div>
+    </li>
+	{{/each}}
+</ul>
+<br/>
+<a href="/user" class="mui-btn mui-btn-primary phone-btn">返回</a>
+
+<script type="text/javascript" src="../public/lib/mui/js/mui.min.js"></script>	
+<script type="text/javascript">
+</script>	
+{{/block}}

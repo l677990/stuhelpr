@@ -1,0 +1,136 @@
+﻿
+{{extend './dome.html'}}
+
+{{block 'title'}} 课程表 {{/block}}
+{{block 'link'}} <link rel="stylesheet" type="text/css" href="../public/css/SH.css"> {{/block}}
+{{block 'content'}}
+    <!--课程表-->
+<section class="course-timetable">
+    <form class="mui-input-group">
+
+    <label for="timetable-btn" class="timetable-btn-font" >选择星期:</label>
+    <select name="week" id="timetable-btn" >
+        <option value="1">星期一</option>
+        <option value="2">星期二</option>
+        <option value="3">星期三</option>
+        <option value="4">星期四</option> 
+        <option value="5">星期五</option> 
+    </select>
+    <h3 align="center">一二节<small>【8:30-10:00】</small></h3>
+    <div class="mui-input-row">
+        <label>课程名:</label>
+        <input type="text"  name="name1" class="mui-input-clear" placeholder="课程名">
+    </div>
+        <div class="mui-input-row">
+        <label>上课地点:</label>
+        <input type="text" name="classplace1" class="mui-input-clear" placeholder="请输入内容">
+    </div>
+        <div class="mui-input-row">
+        <label>老师:</label>
+        <input type="text" name="teacher1" class="mui-input-clear" placeholder="请输入内容">
+    </div>
+
+    <h3 align="center">三四节 <small>【10:10-11:40】</small></h3>
+
+      <div class="mui-input-row">
+        <label>课程名:</label>
+        <input type="text"  name="name2" class="mui-input-clear" placeholder="课程名">
+    </div>
+        <div class="mui-input-row">
+        <label>上课地点:</label>
+        <input type="text" name="classplace2" class="mui-input-clear" placeholder="请输入内容">
+    </div>
+        <div class="mui-input-row">
+        <label>老师:</label>
+        <input type="text" name="teacher2" class="mui-input-clear" placeholder="请输入内容">
+    </div>
+    <h3 align="center">第五节【11:50-12:30】</h3>
+     <div class="mui-input-row">
+        <label>课程名:</label>
+        <input type="text"  name="name3" class="mui-input-clear" placeholder="课程名">
+    </div>
+        <div class="mui-input-row">
+        <label>上课地点:</label>
+        <input type="text" name="classplace3" class="mui-input-clear" placeholder="请输入内容">
+    </div>
+        <div class="mui-input-row">
+        <label>老师:</label>
+        <input type="text" name="teacher3" class="mui-input-clear" placeholder="请输入内容">
+    </div>
+    <h3 align="center">六七节【14:00-15:30】</h3>
+      <div class="mui-input-row">
+        <label>课程名:</label>
+        <input type="text"  name="name4" class="mui-input-clear" placeholder="课程名">
+    </div>
+        <div class="mui-input-row">
+        <label>上课地点:</label>
+        <input type="text" name="classplace4" class="mui-input-clear" placeholder="请输入内容">
+    </div>
+        <div class="mui-input-row">
+        <label>老师:</label>
+        <input type="text" name="teacher4" class="mui-input-clear" placeholder="请输入内容">
+    </div>
+    <h3 align="center">八九节【14:00-17:10】</h3>
+      <div class="mui-input-row">
+        <label>课程名:</label>
+        <input type="text"  name="name5" class="mui-input-clear" placeholder="课程名">
+    </div>
+        <div class="mui-input-row">
+        <label>上课地点:</label>
+        <input type="text" name="classplace5" class="mui-input-clear" placeholder="请输入内容">
+    </div>
+        <div class="mui-input-row">
+        <label>老师:</label>
+        <input type="text" name="teacher5" class="mui-input-clear" placeholder="请输入内容">
+    </div>
+     <h3 align="center">第十节【17:20-18:00】</h3>
+      <div class="mui-input-row">
+        <label>课程名:</label>
+        <input type="text"  name="name6" class="mui-input-clear" placeholder="课程名">
+    </div>
+        <div class="mui-input-row">
+        <label>上课地点:</label>
+        <input type="text" name="classplace6" class="mui-input-clear" placeholder="请输入内容">
+    </div>
+        <div class="mui-input-row">
+        <label>老师:</label>
+        <input type="text" name="teacher6" class="mui-input-clear" placeholder="请输入内容">
+    </div>
+</form>
+</section><br>
+<button type="button" id="submit" class="mui-btn mui-btn-primary btnfh" >确认录入</button><br>
+<a href="/user"  class="mui-btn mui-btn-primary btnfh">返回</a>
+<script type="text/javascript" src="../public/lib/mui/js/mui.min.js"></script>  
+<script src="../public/lib/jquery/jquery.min.js"></script>
+<script type="text/javascript">
+$('#submit').on('click',function(){
+    var data = $('form').serialize();
+    var week ="星期"+$('#timetable-btn').val()+"课程表";
+    mui.confirm('确认修改？',week,['确定','取消'],function(e){
+      console.log(e);
+      if(e.index==0){
+           $.ajax({
+                url:"/course",
+                type:'post',
+                dataType:'json',
+                data:data,
+                success:function(data){
+                    console.log(data);
+                    if(data.err_code==1){
+                        mui.alert('添加成功')
+                    }else if(data.err_code==2){
+                        mui.alert('修改成功')
+                    }else{
+                        mui.alert('服务器繁忙');
+                    }
+                }
+
+                    })
+        }
+
+    });
+   
+})
+</script>   
+ {{/block}}
+

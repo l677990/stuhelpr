@@ -1,0 +1,32 @@
+﻿{{extend './dome.html'}}
+{{block 'title'}} 登录 {{/block}}
+{{block 'link'}} <link rel="stylesheet" type="text/css" href="../public/css/SH.css"> {{/block}}
+{{block 'content'}}
+
+
+<!--登录页面-->
+<div class="Login-box"></div>
+<div class="Login-box2">
+    <form class="mui-input-group">
+    <div class="mui-input-row">
+        <label>学号</label>
+    <input type="text" name="stuid" class="mui-input-clear" placeholder="请输入学号">
+    </div>
+    <div class="mui-input-row">
+        <label>密码</label>
+        <input type="password" name="stupass" class="mui-input-password" placeholder="请输入密码">
+    </div>
+    <div class="mui-button-row">
+        <button type="button" class="mui-btn mui-btn-primary" >登录</button>
+        <a href="add"><button type="button" class="mui-btn mui-btn-danger" >注册</button></a>
+    </div>
+</form>
+<p style="text-align: center;">目前只针对17计算机专业开放内测<br>
+(如暂无账号，可使用测试账号进行登录，账号密码：123)
+</p>
+</div>
+
+<script type="text/javascript" src="../public/lib/mui/js/mui.min.js"></script>
+<script src="../public/lib/jquery/jquery.min.js"></script>
+<script src="../public/js/login.js">    </script>
+{{/block}}

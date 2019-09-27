@@ -1,0 +1,42 @@
+body {
+	background: #FFFFFF;
+	margin: 0;
+	padding:0;
+}
+
+/*img {
+	display: block;
+	width: 100%;
+}*/
+.tab:hover, .tab:hover p {
+	/*background: #1E90FF;*/
+	color: #1E90FF;
+}
+ .mui-content .tab {
+ 	padding-top: 5px;
+ 	height: 50px;
+	text-align: center;
+	
+}
+ .mui-content .tab .mui-icon{
+	font-weight: 700;
+	font-size: 15px;
+}
+ .mui-content .tab p {
+ 	font-size: 15px;
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+.mui-content{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+
+/*轮播图*/
+#sh_gallery {
+	margin: 10px;
+}

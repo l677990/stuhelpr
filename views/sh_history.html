@@ -1,0 +1,33 @@
+{{extend './dome.html'}}
+{{block 'title'}} 历史记录 {{/block}}
+
+{{block 'link'}}<link rel="stylesheet" type="text/css" href="../public/css/shhistory.css">{{/block}}
+{{block 'content'}}
+<!--历史记录-->
+<div class="history-box">
+  <div class="mui-card">
+    <a href="javascript:;" style="color:#000"><div class="mui-card-header shhistory"><span class="iconfont icon-fanhui"></span>　班会通知</a> </div>
+   </div>
+  </div>
+  {{each rows}}
+<div class="history-box">
+<div class="mui-card">
+  <!--页眉，放置标题-->
+  <div class="mui-card-header">{{$value.title}}<div class="sh_history"></div></div>
+  <!--内容区-->
+  <div class="mui-card-content">
+    <pre class="card">{{$value.text}}
+    </pre>
+  </div>
+  <!--页脚，放置补充信息或支持的操作-->
+  <div class="mui-card-footer">发表时间：{{$value.time}} 浏览量:{{$value.browse}}</div>
+</div>
+</div>
+{{/each }}
+
+
+
+<script type="text/javascript" src="../public/lib/mui/js/mui.min.js"></script>
+<script type="text/javascript">
+</script>   
+{{/block}}

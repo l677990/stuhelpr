@@ -1,0 +1,57 @@
+{{extend './dome.html'}}
+
+{{block 'title'}} 通知 {{/block}}
+
+{{block 'link'}} <link rel="stylesheet" type="text/css" href="../public/css/activity.css"> <link rel="stylesheet" type="text/css" href="../public/css/Claim.css">{{/block}}
+
+{{block 'content'}}
+<!--通知-->
+<div class="sh-notice">
+	<div class="sh-notice2"></div>
+ <form class="mui-input-group" action="javascript:;">
+  <div class="mui-input-row">
+        <label>通知</label>
+        <input type="text" name="title" class="mui-input-clear" placeholder="请输入内容">
+    </div>
+      <textarea id="content" name="text"  rows="10" placeholder="输入通知内容"></textarea>
+</form>
+  <div class="Claim-btn ">
+
+    <button type="button" class="mui-btn mui-btn-primary " >发布
+    </button>
+    <a href="/user" class="mui-btn mui-btn-danger " id="sh_btn">返回</a>
+</div> 
+</div>
+<!--临时引用的-->
+<script type="text/javascript" src="../public/lib/mui/js/mui.min.js"></script>	
+<script src="../public/lib/jquery/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+  $('.mui-btn-primary').on('tap',function(){
+    getData(function(data){
+        if(data.err_code==0){
+          mui.alert("发布失败");
+      }else if(data.err_code==1){
+          mui.alert("发布成功",function(){
+            location.href="/";
+          });
+      }else{
+        mui.alert("服务器繁忙");
+      }
+    })
+})
+   
+    function getData(callback){
+    var obj = $('form').serialize();
+    $.ajax({
+    url:"/sh_notice",
+    data:obj,
+    type:"POST",
+    success: function (data) {
+       callback(data);
+    }
+  });
+  }
+})
+</script>	
+{{/block}}

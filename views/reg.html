@@ -1,0 +1,51 @@
+{{extend './dome.html'}}
+
+{{block 'title'}} 注册 {{/block}}
+{{block 'link'}} <link rel="stylesheet" type="text/css" href="../public/css/SH.css"> {{/block}}
+
+{{block 'content'}} 
+<div class="sh-reg">用户注册:</div><br>
+<div class="input-reg">
+  <form>
+    <div>
+    <p>昵称:</p><input type="text" name="stuName" class="input-name" placeholder="昵称" required>
+    </div>
+     <div>
+       <p>学号:</p><input type="text" name="stuId" class="input-name" placeholder="学号" required>
+    </div>
+    <div>
+    <p>电话号码:</p><input type="text" name="stuPhone" class="input-name" placeholder="手机号" required>
+    </div>
+    <div>
+    <p>寝室号:</p><input type="text" name="chamBer" class="input-name" placeholder="寝室号" required>
+    </div>
+    <div>
+    <p>辅导员:</p><input type="text" name="stutor" class="input-name" placeholder="辅导员" required>
+    </div>
+    <div>
+      <p>班级:</p>
+      <select name="classid"  required>
+        {{each rows}}
+      <option value="{{$value.classtable}}">{{$value.classname}}</option>
+      {{/each}}
+    </select>
+    </div>
+      <div>
+    <p>密码:</p><input type="password" name="stuPass" class="input-name" placeholder="password" required>
+    </div>
+       <div>
+    <p>确认密码:</p><input type="password" name="rPass" class="input-name" placeholder="password" required>
+    </div>
+    <input type="radio" name="sex" checked="checked" value="男">男&nbsp&nbsp&nbsp&nbsp
+   <input type="radio" name="sex" value="女">女 <br><br>
+   <input type="checkbox" name="checkbox1" value="1" checked="checked"> 同意协议 <br><br>
+  <a href="/"><button class="reg-btn" type="button"><span class="mui-icon mui-icon-redo"></span>返回</button></a>
+  <button class="reg-btn2" type="button">注册</button>
+</form>
+</div>
+<script type="text/javascript" src="../public/lib/mui/js/mui.min.js"></script>  
+<script src="../public/lib/jquery/jquery.min.js"></script>
+<script src="../public/js/reg.js">
+</script> 
+{{/block}}
+

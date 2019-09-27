@@ -1,0 +1,96 @@
+.box img{
+	height: auto;
+	width: 100%;
+}
+
+.box {
+    font-size: 15px;
+	color: #00000;
+	/*border-bottom: 1px solid #CCCCCC;*/
+	background: #FFFFFF;
+}
+.claim-box {
+	padding:10px 20px 10px;
+	font-size: 16px;
+	color: #616161;
+	border-bottom: 1px solid #e7e7e7;
+	background: #FFF;
+}
+.claim-box b{
+	padding-right: 50px;
+}
+/*.claim-box p{
+	padding: 10px 0;
+}*/
+.mui-card-media {
+	background: #FFFFFF;
+}
+.sh_box {
+	font-size: 18px;
+}
+.Claim-box {
+	margin: 10px;
+	height: 600px;
+}
+.sh-claimbtn {
+	position: fixed;
+	right: 10px;
+	bottom: 60px;
+	border: 1px solid #63B8FF;
+	color: #63B8FF;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background:rgba(255,255,255,0.9);
+	font-size: 14px;
+	text-align: center;
+	line-height: 48px;
+}
+.Claim-btn{
+	padding-top: 30px;
+	text-align: center;
+}
+#file{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+}
+.Claim-box textarea{
+	margin-top: 10px;
+	
+}
+.img img{
+	width: 200px;
+	height: auto;
+}
+#clon{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.2);
+	color: #fff;
+	line-height: 100px;
+	text-align: center;
+}
+#clon .mui-icon-loop{
+	position: absolute;
+	left: 50%;
+	top: 30%;
+	color: #fff;
+	font-size: 60px;
+	transform: translate(-50%,-50%) ;
+	animation: myfirst 1s  linear infinite;
+	-webkit-animation:myfirst 1s infinite;
+}
+
+@keyframes myfirst
+{
+    0% {transform: translate(-50%,-50%)  rotate(0deg)}
+    100% {transform: translate(-50%,-50%) rotate(360deg)}
+   
+}

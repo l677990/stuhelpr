@@ -1,0 +1,111 @@
+﻿body {
+	background: #FFF !important;
+	font-family: "KaiTi";
+}
+ul {
+	list-style: none;
+}
+/*轮播图点进来之后的图片*/
+.bannerimg img{
+	width: 100%;
+}
+/*内容图片*/
+.bannerimg2 {
+width: 100%;
+}
+.bannerimg2 img{
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+
+/*标题*/
+.bannertitle {
+	padding: 25px 16px 20px;
+}
+.bannertitle  .title {
+	font-size: 28px;
+	color: #222;
+	font-weight: 700;
+	margin-bottom: 10px;
+	line-height: 1.4;
+}
+.bannertitle .info span {
+	color: #9b9b9b;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/*活动主题*/
+.article {
+	clear: both;
+	padding: 0 16px;
+}
+.article .title{
+	font-size: 20px;
+	color: #222;
+	line-height: 1.5;
+	margin-bottom: 10px;
+	margin-top: 20px;	
+}
+.article p {
+	font-size: 17px;
+	color: #222;
+	line-height: 0.8;
+	display: block;
+	-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    line-height: 19px;
+}
+
+/*文章内容*/
+.content {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+.content .loaded img {
+	width: 20%;
+	margin-left: 40%;
+	margin-bottom: 1px;
+}
+.content h1  {
+	color: #02a2ff;
+	font-size: 20px;
+	padding:20px 0 5px 0;
+	text-align: center;
+}
+.article .content p {
+	font-size: 16px;
+	color: #222;
+	line-height: 0.8;
+	display: block;
+	-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    line-height: 1px;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+.article .content .titleduo {
+	line-height: 19px;
+	margin: -8px 0;
+}
+/*锚点按钮*/
+.sh-claimbtn {
+	position: fixed;
+	right: 10px;
+	bottom: 60px;
+	border: 1px solid #63B8FF;
+	color: #63B8FF;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background:rgba(255,255,255,0.9);
+	text-align: center;
+}
+.video{
+	width:100%;
+}
